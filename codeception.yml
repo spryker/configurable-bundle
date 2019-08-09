@@ -1,9 +1,5 @@
 namespace: SprykerTest
 
-include:
-  - tests/SprykerTest/Client/ConfigurableBundle
-  - tests/SprykerTest/Zed/ConfigurableBundle
-
 paths:
   tests: tests
   support: .
