@@ -1,4 +1,6 @@
 namespace: SprykerTest
+include:
+  - tests/SprykerTest/Service/ConfigurableBundle
 
 paths:
   tests: tests
