@@ -27,10 +27,6 @@ class ConfigurableBundleTemplateSlotCleaner implements ConfigurableBundleTemplat
      */
     protected $configurableBundleTemplateSlotReader;
 
-    /**
-     * @param \Spryker\Zed\ConfigurableBundle\Persistence\ConfigurableBundleEntityManagerInterface $configurableBundleEntityManager
-     * @param \Spryker\Zed\ConfigurableBundle\Business\Reader\ConfigurableBundleTemplateSlotReaderInterface $configurableBundleTemplateSlotReader
-     */
     public function __construct(
         ConfigurableBundleEntityManagerInterface $configurableBundleEntityManager,
         ConfigurableBundleTemplateSlotReaderInterface $configurableBundleTemplateSlotReader
@@ -39,11 +35,6 @@ class ConfigurableBundleTemplateSlotCleaner implements ConfigurableBundleTemplat
         $this->configurableBundleTemplateSlotReader = $configurableBundleTemplateSlotReader;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplateSlotFilterTransfer $configurableBundleTemplateSlotFilterTransfer
-     *
-     * @return \Generated\Shared\Transfer\ConfigurableBundleTemplateSlotResponseTransfer
-     */
     public function deleteConfigurableBundleTemplateSlot(
         ConfigurableBundleTemplateSlotFilterTransfer $configurableBundleTemplateSlotFilterTransfer
     ): ConfigurableBundleTemplateSlotResponseTransfer {

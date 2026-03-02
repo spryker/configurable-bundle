@@ -12,11 +12,6 @@ use Generated\Shared\Transfer\ConfigurableBundleTemplateTransfer;
 
 interface ConfigurableBundleTemplateCreatorInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplateTransfer $configurableBundleTemplateTransfer
-     *
-     * @return \Generated\Shared\Transfer\ConfigurableBundleTemplateResponseTransfer
-     */
     public function createConfigurableBundleTemplate(
         ConfigurableBundleTemplateTransfer $configurableBundleTemplateTransfer
     ): ConfigurableBundleTemplateResponseTransfer;

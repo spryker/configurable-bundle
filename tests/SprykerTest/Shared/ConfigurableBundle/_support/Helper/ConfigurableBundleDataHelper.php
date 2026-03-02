@@ -18,11 +18,6 @@ class ConfigurableBundleDataHelper extends Module
 {
     use LocatorHelperTrait;
 
-    /**
-     * @param array $seed
-     *
-     * @return \Generated\Shared\Transfer\ConfigurableBundleTemplateTransfer
-     */
     public function haveConfigurableBundleTemplate(array $seed = []): ConfigurableBundleTemplateTransfer
     {
         $configurableBundleTemplateBuilder = new ConfigurableBundleTemplateBuilder($seed);
@@ -34,11 +29,6 @@ class ConfigurableBundleDataHelper extends Module
             ->getConfigurableBundleTemplate();
     }
 
-    /**
-     * @param array $seed
-     *
-     * @return \Generated\Shared\Transfer\ConfigurableBundleTemplateSlotTransfer
-     */
     public function haveConfigurableBundleTemplateSlot(array $seed = []): ConfigurableBundleTemplateSlotTransfer
     {
         $configurableBundleTemplateSlotBuilder = new ConfigurableBundleTemplateSlotBuilder($seed);

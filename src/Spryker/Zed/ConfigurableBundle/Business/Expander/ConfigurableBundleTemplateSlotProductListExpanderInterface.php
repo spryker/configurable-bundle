@@ -11,11 +11,6 @@ use Generated\Shared\Transfer\ConfigurableBundleTemplateSlotTransfer;
 
 interface ConfigurableBundleTemplateSlotProductListExpanderInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplateSlotTransfer $configurableBundleTemplateSlotTransfer
-     *
-     * @return \Generated\Shared\Transfer\ConfigurableBundleTemplateSlotTransfer
-     */
     public function expandConfigurableBundleTemplateSlotWithProductList(
         ConfigurableBundleTemplateSlotTransfer $configurableBundleTemplateSlotTransfer
     ): ConfigurableBundleTemplateSlotTransfer;

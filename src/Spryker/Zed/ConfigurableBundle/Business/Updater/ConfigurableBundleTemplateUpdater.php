@@ -57,13 +57,6 @@ class ConfigurableBundleTemplateUpdater implements ConfigurableBundleTemplateUpd
      */
     protected $eventTriggerer;
 
-    /**
-     * @param \Spryker\Zed\ConfigurableBundle\Persistence\ConfigurableBundleEntityManagerInterface $configurableBundleEntityManager
-     * @param \Spryker\Zed\ConfigurableBundle\Business\Writer\ConfigurableBundleTranslationWriterInterface $configurableBundleTranslationWriter
-     * @param \Spryker\Zed\ConfigurableBundle\Business\Generator\ConfigurableBundleNameGeneratorInterface $configurableBundleNameGenerator
-     * @param \Spryker\Zed\ConfigurableBundle\Business\Reader\ConfigurableBundleTemplateReaderInterface $configurableBundleTemplateReader
-     * @param \Spryker\Zed\ConfigurableBundle\Business\EventTriggerer\EventTriggererInterface $eventTriggerer
-     */
     public function __construct(
         ConfigurableBundleEntityManagerInterface $configurableBundleEntityManager,
         ConfigurableBundleTranslationWriterInterface $configurableBundleTranslationWriter,
@@ -78,11 +71,6 @@ class ConfigurableBundleTemplateUpdater implements ConfigurableBundleTemplateUpd
         $this->eventTriggerer = $eventTriggerer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplateTransfer $configurableBundleTemplateTransfer
-     *
-     * @return \Generated\Shared\Transfer\ConfigurableBundleTemplateResponseTransfer
-     */
     public function updateConfigurableBundleTemplate(
         ConfigurableBundleTemplateTransfer $configurableBundleTemplateTransfer
     ): ConfigurableBundleTemplateResponseTransfer {
@@ -100,11 +88,6 @@ class ConfigurableBundleTemplateUpdater implements ConfigurableBundleTemplateUpd
         });
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplateFilterTransfer $configurableBundleTemplateFilterTransfer
-     *
-     * @return \Generated\Shared\Transfer\ConfigurableBundleTemplateResponseTransfer
-     */
     public function activateConfigurableBundleTemplate(
         ConfigurableBundleTemplateFilterTransfer $configurableBundleTemplateFilterTransfer
     ): ConfigurableBundleTemplateResponseTransfer {
@@ -131,11 +114,6 @@ class ConfigurableBundleTemplateUpdater implements ConfigurableBundleTemplateUpd
             ->setIsSuccessful(true);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplateFilterTransfer $configurableBundleTemplateFilterTransfer
-     *
-     * @return \Generated\Shared\Transfer\ConfigurableBundleTemplateResponseTransfer
-     */
     public function deactivateConfigurableBundleTemplate(
         ConfigurableBundleTemplateFilterTransfer $configurableBundleTemplateFilterTransfer
     ): ConfigurableBundleTemplateResponseTransfer {
@@ -162,11 +140,6 @@ class ConfigurableBundleTemplateUpdater implements ConfigurableBundleTemplateUpd
             ->setIsSuccessful(true);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplateTransfer $configurableBundleTemplateTransfer
-     *
-     * @return \Generated\Shared\Transfer\ConfigurableBundleTemplateResponseTransfer
-     */
     protected function executeUpdateConfigurableBundleTemplateTransaction(
         ConfigurableBundleTemplateTransfer $configurableBundleTemplateTransfer
     ): ConfigurableBundleTemplateResponseTransfer {
@@ -182,11 +155,6 @@ class ConfigurableBundleTemplateUpdater implements ConfigurableBundleTemplateUpd
             ->setIsSuccessful(true);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplateTransfer $configurableBundleTemplateTransfer
-     *
-     * @return \Generated\Shared\Transfer\ConfigurableBundleTemplateResponseTransfer
-     */
     protected function getConfigurableBundleTemplate(
         ConfigurableBundleTemplateTransfer $configurableBundleTemplateTransfer
     ): ConfigurableBundleTemplateResponseTransfer {
@@ -198,11 +166,6 @@ class ConfigurableBundleTemplateUpdater implements ConfigurableBundleTemplateUpd
         return $configurableBundleTemplateResponseTransfer;
     }
 
-    /**
-     * @param string $message
-     *
-     * @return \Generated\Shared\Transfer\ConfigurableBundleTemplateResponseTransfer
-     */
     protected function getErrorResponse(string $message): ConfigurableBundleTemplateResponseTransfer
     {
         $messageTransfer = (new MessageTransfer())

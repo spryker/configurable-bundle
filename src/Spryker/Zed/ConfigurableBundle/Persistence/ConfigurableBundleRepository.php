@@ -25,11 +25,6 @@ use Spryker\Zed\Kernel\Persistence\AbstractRepository;
  */
 class ConfigurableBundleRepository extends AbstractRepository implements ConfigurableBundleRepositoryInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplateFilterTransfer $configurableBundleTemplateFilterTransfer
-     *
-     * @return \Generated\Shared\Transfer\ConfigurableBundleTemplateTransfer|null
-     */
     public function findConfigurableBundleTemplate(
         ConfigurableBundleTemplateFilterTransfer $configurableBundleTemplateFilterTransfer
     ): ?ConfigurableBundleTemplateTransfer {
@@ -52,11 +47,6 @@ class ConfigurableBundleRepository extends AbstractRepository implements Configu
             ->mapTemplateEntityToTemplateTransfer($configurableBundleTemplateEntity, new ConfigurableBundleTemplateTransfer());
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplateFilterTransfer $configurableBundleTemplateFilterTransfer
-     *
-     * @return \Generated\Shared\Transfer\ConfigurableBundleTemplateCollectionTransfer
-     */
     public function getConfigurableBundleTemplateCollection(
         ConfigurableBundleTemplateFilterTransfer $configurableBundleTemplateFilterTransfer
     ): ConfigurableBundleTemplateCollectionTransfer {
@@ -73,11 +63,6 @@ class ConfigurableBundleRepository extends AbstractRepository implements Configu
             ->mapTemplateEntityCollectionToTemplateTransferCollection($configurableBundleTemplateQuery->find());
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplateSlotFilterTransfer $configurableBundleTemplateSlotFilterTransfer
-     *
-     * @return \Generated\Shared\Transfer\ConfigurableBundleTemplateSlotTransfer|null
-     */
     public function findConfigurableBundleTemplateSlot(
         ConfigurableBundleTemplateSlotFilterTransfer $configurableBundleTemplateSlotFilterTransfer
     ): ?ConfigurableBundleTemplateSlotTransfer {
@@ -101,11 +86,6 @@ class ConfigurableBundleRepository extends AbstractRepository implements Configu
             ->mapTemplateSlotEntityToTemplateSlotTransfer($configurableBundleTemplateSlotEntity, new ConfigurableBundleTemplateSlotTransfer());
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplateSlotFilterTransfer $configurableBundleTemplateSlotFilterTransfer
-     *
-     * @return \Generated\Shared\Transfer\ConfigurableBundleTemplateSlotCollectionTransfer
-     */
     public function getConfigurableBundleTemplateSlotCollection(
         ConfigurableBundleTemplateSlotFilterTransfer $configurableBundleTemplateSlotFilterTransfer
     ): ConfigurableBundleTemplateSlotCollectionTransfer {
@@ -146,12 +126,6 @@ class ConfigurableBundleRepository extends AbstractRepository implements Configu
         return $configurableBundleTemplateUuids->toArray();
     }
 
-    /**
-     * @param \Orm\Zed\ConfigurableBundle\Persistence\SpyConfigurableBundleTemplateQuery $configurableBundleTemplateQuery
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplateFilterTransfer $configurableBundleTemplateFilterTransfer
-     *
-     * @return \Orm\Zed\ConfigurableBundle\Persistence\SpyConfigurableBundleTemplateQuery
-     */
     protected function setConfigurableBundleTemplateFilters(
         SpyConfigurableBundleTemplateQuery $configurableBundleTemplateQuery,
         ConfigurableBundleTemplateFilterTransfer $configurableBundleTemplateFilterTransfer
@@ -180,12 +154,6 @@ class ConfigurableBundleRepository extends AbstractRepository implements Configu
         return $configurableBundleTemplateQuery;
     }
 
-    /**
-     * @param \Orm\Zed\ConfigurableBundle\Persistence\SpyConfigurableBundleTemplateSlotQuery $configurableBundleTemplateSlotQuery
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplateSlotFilterTransfer $configurableBundleTemplateSlotFilterTransfer
-     *
-     * @return \Orm\Zed\ConfigurableBundle\Persistence\SpyConfigurableBundleTemplateSlotQuery
-     */
     protected function setConfigurableBundleTemplateSlotFilters(
         SpyConfigurableBundleTemplateSlotQuery $configurableBundleTemplateSlotQuery,
         ConfigurableBundleTemplateSlotFilterTransfer $configurableBundleTemplateSlotFilterTransfer

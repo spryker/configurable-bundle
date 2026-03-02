@@ -19,19 +19,11 @@ class ConfiguredBundleItemCleaner implements ConfiguredBundleItemCleanerInterfac
      */
     protected $configurableBundleRepository;
 
-    /**
-     * @param \Spryker\Zed\ConfigurableBundle\Persistence\ConfigurableBundleRepositoryInterface $configurableBundleRepository
-     */
     public function __construct(ConfigurableBundleRepositoryInterface $configurableBundleRepository)
     {
         $this->configurableBundleRepository = $configurableBundleRepository;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
-     *
-     * @return \Generated\Shared\Transfer\QuoteTransfer
-     */
     public function removeInactiveConfiguredBundleItemsFromQuote(QuoteTransfer $quoteTransfer): QuoteTransfer
     {
         $filteredItemTransfers = new ArrayObject();
@@ -68,11 +60,6 @@ class ConfiguredBundleItemCleaner implements ConfiguredBundleItemCleanerInterfac
         return array_filter($configurableBundleTemplateUuids);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ItemTransfer $itemTransfer
-     *
-     * @return string|null
-     */
     protected function extractConfigurableBundleTemplateUuid(ItemTransfer $itemTransfer): ?string
     {
         if (!$itemTransfer->getConfiguredBundle() || !$itemTransfer->getConfiguredBundle()->getTemplate()) {

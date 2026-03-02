@@ -12,11 +12,6 @@ use Generated\Shared\Transfer\ConfigurableBundleTemplateSlotTransfer;
 
 interface ConfigurableBundleTemplateSlotUpdaterInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplateSlotTransfer $configurableBundleTemplateSlotTransfer
-     *
-     * @return \Generated\Shared\Transfer\ConfigurableBundleTemplateSlotResponseTransfer
-     */
     public function updateConfigurableBundleTemplateSlot(
         ConfigurableBundleTemplateSlotTransfer $configurableBundleTemplateSlotTransfer
     ): ConfigurableBundleTemplateSlotResponseTransfer;

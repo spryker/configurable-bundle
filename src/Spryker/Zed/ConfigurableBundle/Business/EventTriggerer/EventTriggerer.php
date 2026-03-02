@@ -18,19 +18,11 @@ class EventTriggerer implements EventTriggererInterface
      */
     protected $eventFacade;
 
-    /**
-     * @param \Spryker\Zed\ConfigurableBundle\Dependency\Facade\ConfigurableBundleToEventFacadeInterface $eventFacade
-     */
     public function __construct(ConfigurableBundleToEventFacadeInterface $eventFacade)
     {
         $this->eventFacade = $eventFacade;
     }
 
-    /**
-     * @param int $idConfigurableBundleTemplate
-     *
-     * @return void
-     */
     public function triggerConfigurableBundleTemplatePublishEvent(int $idConfigurableBundleTemplate): void
     {
         $this->eventFacade->trigger(

@@ -94,9 +94,6 @@ class ConfigurableBundleFacadeTest extends Unit
      */
     protected $tester;
 
-    /**
-     * @return void
-     */
     public function testGetConfigurableBundleTemplateRetrievesTemplate(): void
     {
         // Arrange
@@ -118,9 +115,6 @@ class ConfigurableBundleFacadeTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testGetConfigurableBundleTemplateRetrievesTemplateWithWrongId(): void
     {
         // Arrange
@@ -140,9 +134,6 @@ class ConfigurableBundleFacadeTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testGetConfigurableBundleTemplateRetrievesTemplateWithExpandedTranslations(): void
     {
         // Arrange
@@ -164,9 +155,6 @@ class ConfigurableBundleFacadeTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testGetConfigurableBundleTemplateCollectionRetrievesTemplateCollection(): void
     {
         // Arrange
@@ -191,9 +179,6 @@ class ConfigurableBundleFacadeTest extends Unit
         $this->assertCount(2, $configurableBundleTemplateCollectionTransfer->getConfigurableBundleTemplates());
     }
 
-    /**
-     * @return void
-     */
     public function testGetConfigurableBundleTemplateCollectionRetrievesTemplateCollectionWithWrongId(): void
     {
         // Arrange
@@ -209,9 +194,6 @@ class ConfigurableBundleFacadeTest extends Unit
         $this->assertEmpty($configurableBundleTemplateCollectionTransfer->getConfigurableBundleTemplates());
     }
 
-    /**
-     * @return void
-     */
     public function testGetConfigurableBundleTemplateCollectionRetrievesTemplateCollectionWithExpandedTranslations(): void
     {
         // Arrange
@@ -232,9 +214,6 @@ class ConfigurableBundleFacadeTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testCreateConfigurableBundleTemplateCreatesTemplate(): void
     {
         // Arrange
@@ -254,9 +233,6 @@ class ConfigurableBundleFacadeTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testCreateConfigurableBundleTemplateCreatesTemplateWithoutProvidedTranslations(): void
     {
         // Arrange
@@ -273,9 +249,6 @@ class ConfigurableBundleFacadeTest extends Unit
             ->createConfigurableBundleTemplate($configurableBundleTemplateTransfer);
     }
 
-    /**
-     * @return void
-     */
     public function testUpdateConfigurableBundleTemplateUpdatesTemplate(): void
     {
         // Arrange
@@ -299,9 +272,6 @@ class ConfigurableBundleFacadeTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testUpdateConfigurableBundleTemplateUpdatesTemplateWithoutProvidedId(): void
     {
         // Arrange
@@ -322,9 +292,6 @@ class ConfigurableBundleFacadeTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testUpdateConfigurableBundleTemplateUpdatesTemplateWithoutProvidedTranslations(): void
     {
         // Arrange
@@ -341,9 +308,6 @@ class ConfigurableBundleFacadeTest extends Unit
             ->updateConfigurableBundleTemplate($configurableBundleTemplateTransfer);
     }
 
-    /**
-     * @return void
-     */
     public function testActivateConfigurableBundleTemplateActivatesTemplate(): void
     {
         // Arrange
@@ -362,9 +326,6 @@ class ConfigurableBundleFacadeTest extends Unit
         $this->assertTrue($configurableBundleTemplateResponseTransfer->getConfigurableBundleTemplate()->getIsActive());
     }
 
-    /**
-     * @return void
-     */
     public function testActivateConfigurableBundleTemplateActivatesTemplateWithWithoutProvidedId(): void
     {
         // Arrange
@@ -385,9 +346,6 @@ class ConfigurableBundleFacadeTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testActivateConfigurableBundleTemplateActivatesTemplateAlreadyActiveTemplate(): void
     {
         // Arrange
@@ -409,9 +367,6 @@ class ConfigurableBundleFacadeTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testDeactivateConfigurableBundleTemplateDeactivatesTemplate(): void
     {
         // Arrange
@@ -430,9 +385,6 @@ class ConfigurableBundleFacadeTest extends Unit
         $this->assertFalse($configurableBundleTemplateResponseTransfer->getConfigurableBundleTemplate()->getIsActive());
     }
 
-    /**
-     * @return void
-     */
     public function testDeactivateConfigurableBundleTemplateDeactivatesTemplateWithoutProvidedId(): void
     {
         // Arrange
@@ -453,9 +405,6 @@ class ConfigurableBundleFacadeTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testDeactivateConfigurableBundleTemplateDeactivatesTemplateAlreadyDeactivatedTemplate(): void
     {
         // Arrange
@@ -477,9 +426,6 @@ class ConfigurableBundleFacadeTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testDeleteConfigurableBundleTemplateDeletesTemplate(): void
     {
         // Arrange
@@ -497,9 +443,6 @@ class ConfigurableBundleFacadeTest extends Unit
         $this->assertTrue($configurableBundleTemplateResponseTransfer->getIsSuccessful());
     }
 
-    /**
-     * @return void
-     */
     public function testDeleteConfigurableBundleTemplateDeletesTemplateWithoutProvidedId(): void
     {
         // Arrange
@@ -520,9 +463,6 @@ class ConfigurableBundleFacadeTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testDeleteConfigurableBundleTemplateDeletesTemplateSlots(): void
     {
         // Arrange
@@ -551,9 +491,6 @@ class ConfigurableBundleFacadeTest extends Unit
         $this->assertFalse($configurableBundleTemplateSlotResponseTransfer->getIsSuccessful());
     }
 
-    /**
-     * @return void
-     */
     public function testGetConfigurableBundleTemplateSlotRetrievesSlot(): void
     {
         // Arrange
@@ -578,9 +515,6 @@ class ConfigurableBundleFacadeTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testGetConfigurableBundleTemplateSlotRetrievesSlotWithoutProvidedId(): void
     {
         // Arrange
@@ -601,9 +535,6 @@ class ConfigurableBundleFacadeTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testGetConfigurableBundleTemplateSlotRetrievesSlotWithExpandedTemplate(): void
     {
         // Arrange
@@ -628,9 +559,6 @@ class ConfigurableBundleFacadeTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testGetConfigurableBundleTemplateSlotRetrievesSlotWithExpandedProductList(): void
     {
         // Arrange
@@ -655,9 +583,6 @@ class ConfigurableBundleFacadeTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testGetConfigurableBundleTemplateSlotRetrievesSlotWithExpandedTranslations(): void
     {
         // Arrange
@@ -682,9 +607,6 @@ class ConfigurableBundleFacadeTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testGetConfigurableBundleTemplateSlotCollectionRetrievesSlotCollection(): void
     {
         // Arrange
@@ -705,9 +627,6 @@ class ConfigurableBundleFacadeTest extends Unit
         $this->assertCount(1, $configurableBundleTemplateSlotCollectionTransfer->getConfigurableBundleTemplateSlots());
     }
 
-    /**
-     * @return void
-     */
     public function testGetConfigurableBundleTemplateSlotCollectionRetrievesSlotCollectionWithoutProvidedId(): void
     {
         // Arrange
@@ -723,9 +642,6 @@ class ConfigurableBundleFacadeTest extends Unit
         $this->assertEmpty($configurableBundleTemplateSlotCollectionTransfer->getConfigurableBundleTemplateSlots());
     }
 
-    /**
-     * @return void
-     */
     public function testGetConfigurableBundleTemplateSlotCollectionRetrievesSlotCollectionWithExpandedProductList(): void
     {
         // Arrange
@@ -749,9 +665,6 @@ class ConfigurableBundleFacadeTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testGetConfigurableBundleTemplateSlotCollectionRetrievesSlotCollectionWithExpandedTranslations(): void
     {
         // Arrange
@@ -775,9 +688,6 @@ class ConfigurableBundleFacadeTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testCreateConfigurableBundleTemplateSlotCreatesSlot(): void
     {
         // Arrange
@@ -800,9 +710,6 @@ class ConfigurableBundleFacadeTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testCreateConfigurableBundleTemplateSlotCreatesSlotWithoutProvidedTemplateId(): void
     {
         // Arrange
@@ -819,9 +726,6 @@ class ConfigurableBundleFacadeTest extends Unit
             ->createConfigurableBundleTemplateSlot($configurableBundleTemplateSlotTransfer);
     }
 
-    /**
-     * @return void
-     */
     public function testCreateConfigurableBundleTemplateSlotCreatesSlotWithoutProvidedTranslations(): void
     {
         // Arrange
@@ -840,9 +744,6 @@ class ConfigurableBundleFacadeTest extends Unit
             ->createConfigurableBundleTemplateSlot($configurableBundleTemplateSlotTransfer);
     }
 
-    /**
-     * @return void
-     */
     public function testUpdateConfigurableBundleTemplateSlotUpdatesSlot(): void
     {
         // Arrange
@@ -870,9 +771,6 @@ class ConfigurableBundleFacadeTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testUpdateConfigurableBundleTemplateSlotUpdatesSlotWithoutProvidedId(): void
     {
         // Arrange
@@ -895,9 +793,6 @@ class ConfigurableBundleFacadeTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testDeleteConfigurableBundleTemplateSlotDeletesSlot(): void
     {
         // Arrange
@@ -918,9 +813,6 @@ class ConfigurableBundleFacadeTest extends Unit
         $this->assertTrue($configurableBundleTemplateSlotResponseTransfer->getIsSuccessful());
     }
 
-    /**
-     * @return void
-     */
     public function testDeleteConfigurableBundleTemplateSlotDeletesSlotWithoutProvidedId(): void
     {
         // Arrange
@@ -941,9 +833,6 @@ class ConfigurableBundleFacadeTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testRemoveInactiveConfiguredBundleItemsFromQuoteCleanUpsQuote(): void
     {
         // Arrange
@@ -985,9 +874,6 @@ class ConfigurableBundleFacadeTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testRemoveInactiveConfiguredBundleItemsFromQuoteCleanUpsQuoteWithoutConfiguredBundleProperties(): void
     {
         // Arrange
@@ -1005,9 +891,6 @@ class ConfigurableBundleFacadeTest extends Unit
         $this->assertCount(3, $quoteTransfer->getItems());
     }
 
-    /**
-     * @return void
-     */
     public function testIsProductListDeletableChecksRelationshipsBetweenProductListAndSlots(): void
     {
         // Arrange
@@ -1030,9 +913,6 @@ class ConfigurableBundleFacadeTest extends Unit
         $this->assertCount(1, $productListResponseTransfer->getMessages());
     }
 
-    /**
-     * @return void
-     */
     public function testIsProductListDeletableChecksRelationshipsBetweenProductListAndSlotsWithoutProvidedId(): void
     {
         // Arrange
@@ -1050,9 +930,6 @@ class ConfigurableBundleFacadeTest extends Unit
             );
     }
 
-    /**
-     * @return void
-     */
     public function testIsProductListDeletableChecksRelationshipsBetweenProductListAndNotFoundSlots(): void
     {
         // Arrange
@@ -1070,9 +947,6 @@ class ConfigurableBundleFacadeTest extends Unit
         $this->assertTrue($productListResponseTransfer->getIsSuccessful());
     }
 
-    /**
-     * @return void
-     */
     public function testGetConfigurableBundleTemplateRetrievesTemplateWithCombinedImageSets(): void
     {
         // Arrange
@@ -1108,9 +982,6 @@ class ConfigurableBundleFacadeTest extends Unit
         $this->assertSame($localizedProductImageSetTransfer->toArray(), $productImageSetTransfers->offsetGet(1)->toArray());
     }
 
-    /**
-     * @return void
-     */
     public function testGetConfigurableBundleTemplateRetrievesTemplateWithDefaultImageSets(): void
     {
         // Arrange
@@ -1140,9 +1011,6 @@ class ConfigurableBundleFacadeTest extends Unit
         $this->assertSame($productImageSetTransfer->toArray(), $productImageSetTransfers->offsetGet(0)->toArray());
     }
 
-    /**
-     * @return void
-     */
     public function testGetConfigurableBundleTemplateRetrievesTemplateWithTwoImageSets(): void
     {
         // Arrange
@@ -1173,9 +1041,6 @@ class ConfigurableBundleFacadeTest extends Unit
         $this->assertCount(2, $productImageSetTransfers);
     }
 
-    /**
-     * @return void
-     */
     public function testGetConfigurableBundleTemplateRetrievesTemplateWithOrderedImages(): void
     {
         // Arrange
@@ -1213,9 +1078,6 @@ class ConfigurableBundleFacadeTest extends Unit
         $this->assertSame(12, $productImageTransfers->offsetGet(2)->getSortorder());
     }
 
-    /**
-     * @return void
-     */
     public function testGetConfigurableBundleTemplateCollectionRetrievesTemplatesWithImageSets(): void
     {
         // Arrange
@@ -1244,9 +1106,6 @@ class ConfigurableBundleFacadeTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testGetConfigurableBundleTemplateCollectionRetrievesTemplatesWithLimit(): void
     {
         // Arrange

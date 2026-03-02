@@ -12,11 +12,6 @@ use Generated\Shared\Transfer\ConfigurableBundleTemplateResponseTransfer;
 
 interface ConfigurableBundleTemplateCleanerInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplateFilterTransfer $configurableBundleTemplateFilterTransfer
-     *
-     * @return \Generated\Shared\Transfer\ConfigurableBundleTemplateResponseTransfer
-     */
     public function deleteConfigurableBundleTemplate(
         ConfigurableBundleTemplateFilterTransfer $configurableBundleTemplateFilterTransfer
     ): ConfigurableBundleTemplateResponseTransfer;

@@ -34,10 +34,6 @@ class ProductListWriter implements ProductListWriterInterface
      */
     protected $productListTitleGenerator;
 
-    /**
-     * @param \Spryker\Zed\ConfigurableBundle\Dependency\Facade\ConfigurableBundleToProductListFacadeInterface $productListFacade
-     * @param \Spryker\Zed\ConfigurableBundle\Business\Generator\ProductListTitleGeneratorInterface $productListTitleGenerator
-     */
     public function __construct(
         ConfigurableBundleToProductListFacadeInterface $productListFacade,
         ProductListTitleGeneratorInterface $productListTitleGenerator
@@ -46,11 +42,6 @@ class ProductListWriter implements ProductListWriterInterface
         $this->productListTitleGenerator = $productListTitleGenerator;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplateSlotTransfer $configurableBundleTemplateSlotTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductListResponseTransfer
-     */
     public function createProductList(ConfigurableBundleTemplateSlotTransfer $configurableBundleTemplateSlotTransfer): ProductListResponseTransfer
     {
         $productListTransfer = (new ProductListTransfer())
@@ -62,11 +53,6 @@ class ProductListWriter implements ProductListWriterInterface
         return $this->productListFacade->createProductList($productListTransfer);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplateSlotTransfer $configurableBundleTemplateSlotTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductListResponseTransfer
-     */
     public function updateProductList(ConfigurableBundleTemplateSlotTransfer $configurableBundleTemplateSlotTransfer): ProductListResponseTransfer
     {
         $configurableBundleTemplateSlotTransfer

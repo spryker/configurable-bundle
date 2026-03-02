@@ -37,19 +37,11 @@ class ProductListDeleteChecker implements ProductListDeleteCheckerInterface
      */
     protected $configurableBundleTemplateSlotReader;
 
-    /**
-     * @param \Spryker\Zed\ConfigurableBundle\Business\Reader\ConfigurableBundleTemplateSlotReaderInterface $configurableBundleTemplateSlotReader
-     */
     public function __construct(ConfigurableBundleTemplateSlotReaderInterface $configurableBundleTemplateSlotReader)
     {
         $this->configurableBundleTemplateSlotReader = $configurableBundleTemplateSlotReader;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplateSlotFilterTransfer $configurableBundleTemplateSlotFilterTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductListResponseTransfer
-     */
     public function isProductListDeletable(
         ConfigurableBundleTemplateSlotFilterTransfer $configurableBundleTemplateSlotFilterTransfer
     ): ProductListResponseTransfer {
@@ -70,12 +62,6 @@ class ProductListDeleteChecker implements ProductListDeleteCheckerInterface
         return $this->createProductListResponse($productListTransfer, $configurableBundleTemplateSlotCollectionTransfer);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductListTransfer $productListTransfer
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplateSlotCollectionTransfer $configurableBundleTemplateSlotCollectionTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductListResponseTransfer
-     */
     protected function createProductListResponse(
         ProductListTransfer $productListTransfer,
         ConfigurableBundleTemplateSlotCollectionTransfer $configurableBundleTemplateSlotCollectionTransfer
@@ -96,12 +82,6 @@ class ProductListDeleteChecker implements ProductListDeleteCheckerInterface
         return $productListResponseTransfer->setIsSuccessful(false);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductListResponseTransfer $productListResponseTransfer
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplateSlotCollectionTransfer $configurableBundleTemplateSlotCollectionTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductListResponseTransfer
-     */
     protected function expandProductListResponseWithMessages(
         ProductListResponseTransfer $productListResponseTransfer,
         ConfigurableBundleTemplateSlotCollectionTransfer $configurableBundleTemplateSlotCollectionTransfer
@@ -121,12 +101,6 @@ class ProductListDeleteChecker implements ProductListDeleteCheckerInterface
         return $productListResponseTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductListResponseTransfer $productListResponseTransfer
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplateSlotTransfer $configurableBundleTemplateSlotTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductListResponseTransfer
-     */
     protected function addMessageToProductListResponse(
         ProductListResponseTransfer $productListResponseTransfer,
         ConfigurableBundleTemplateSlotTransfer $configurableBundleTemplateSlotTransfer

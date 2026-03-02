@@ -16,38 +16,18 @@ use Generated\Shared\Transfer\ConfigurableBundleTemplateTransfer;
 
 interface ConfigurableBundleRepositoryInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplateFilterTransfer $configurableBundleTemplateFilterTransfer
-     *
-     * @return \Generated\Shared\Transfer\ConfigurableBundleTemplateTransfer|null
-     */
     public function findConfigurableBundleTemplate(
         ConfigurableBundleTemplateFilterTransfer $configurableBundleTemplateFilterTransfer
     ): ?ConfigurableBundleTemplateTransfer;
 
-    /**
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplateFilterTransfer $configurableBundleTemplateFilterTransfer
-     *
-     * @return \Generated\Shared\Transfer\ConfigurableBundleTemplateCollectionTransfer
-     */
     public function getConfigurableBundleTemplateCollection(
         ConfigurableBundleTemplateFilterTransfer $configurableBundleTemplateFilterTransfer
     ): ConfigurableBundleTemplateCollectionTransfer;
 
-    /**
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplateSlotFilterTransfer $configurableBundleTemplateSlotFilterTransfer
-     *
-     * @return \Generated\Shared\Transfer\ConfigurableBundleTemplateSlotTransfer|null
-     */
     public function findConfigurableBundleTemplateSlot(
         ConfigurableBundleTemplateSlotFilterTransfer $configurableBundleTemplateSlotFilterTransfer
     ): ?ConfigurableBundleTemplateSlotTransfer;
 
-    /**
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplateSlotFilterTransfer $configurableBundleTemplateSlotFilterTransfer
-     *
-     * @return \Generated\Shared\Transfer\ConfigurableBundleTemplateSlotCollectionTransfer
-     */
     public function getConfigurableBundleTemplateSlotCollection(
         ConfigurableBundleTemplateSlotFilterTransfer $configurableBundleTemplateSlotFilterTransfer
     ): ConfigurableBundleTemplateSlotCollectionTransfer;

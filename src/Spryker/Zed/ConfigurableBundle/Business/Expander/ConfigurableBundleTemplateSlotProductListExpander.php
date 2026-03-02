@@ -17,19 +17,11 @@ class ConfigurableBundleTemplateSlotProductListExpander implements ConfigurableB
      */
     protected $productListFacade;
 
-    /**
-     * @param \Spryker\Zed\ConfigurableBundle\Dependency\Facade\ConfigurableBundleToProductListFacadeInterface $productListFacade
-     */
     public function __construct(ConfigurableBundleToProductListFacadeInterface $productListFacade)
     {
         $this->productListFacade = $productListFacade;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplateSlotTransfer $configurableBundleTemplateSlotTransfer
-     *
-     * @return \Generated\Shared\Transfer\ConfigurableBundleTemplateSlotTransfer
-     */
     public function expandConfigurableBundleTemplateSlotWithProductList(
         ConfigurableBundleTemplateSlotTransfer $configurableBundleTemplateSlotTransfer
     ): ConfigurableBundleTemplateSlotTransfer {

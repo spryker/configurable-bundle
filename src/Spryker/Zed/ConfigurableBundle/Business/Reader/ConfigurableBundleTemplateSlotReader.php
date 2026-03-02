@@ -46,12 +46,6 @@ class ConfigurableBundleTemplateSlotReader implements ConfigurableBundleTemplate
      */
     protected $localeFacade;
 
-    /**
-     * @param \Spryker\Zed\ConfigurableBundle\Persistence\ConfigurableBundleRepositoryInterface $configurableBundleRepository
-     * @param \Spryker\Zed\ConfigurableBundle\Business\Expander\ConfigurableBundleTranslationExpanderInterface $configurableBundleTranslationExpander
-     * @param \Spryker\Zed\ConfigurableBundle\Business\Expander\ConfigurableBundleTemplateSlotProductListExpanderInterface $configurableBundleTemplateSlotProductListExpander
-     * @param \Spryker\Zed\ConfigurableBundle\Dependency\Facade\ConfigurableBundleToLocaleFacadeInterface $localeFacade
-     */
     public function __construct(
         ConfigurableBundleRepositoryInterface $configurableBundleRepository,
         ConfigurableBundleTranslationExpanderInterface $configurableBundleTranslationExpander,
@@ -64,11 +58,6 @@ class ConfigurableBundleTemplateSlotReader implements ConfigurableBundleTemplate
         $this->localeFacade = $localeFacade;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplateSlotFilterTransfer $configurableBundleTemplateSlotFilterTransfer
-     *
-     * @return \Generated\Shared\Transfer\ConfigurableBundleTemplateSlotResponseTransfer
-     */
     public function getConfigurableBundleTemplateSlot(
         ConfigurableBundleTemplateSlotFilterTransfer $configurableBundleTemplateSlotFilterTransfer
     ): ConfigurableBundleTemplateSlotResponseTransfer {
@@ -89,11 +78,6 @@ class ConfigurableBundleTemplateSlotReader implements ConfigurableBundleTemplate
             ->setIsSuccessful(true);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplateSlotFilterTransfer $configurableBundleTemplateSlotFilterTransfer
-     *
-     * @return \Generated\Shared\Transfer\ConfigurableBundleTemplateSlotCollectionTransfer
-     */
     public function getConfigurableBundleTemplateSlotCollection(
         ConfigurableBundleTemplateSlotFilterTransfer $configurableBundleTemplateSlotFilterTransfer
     ): ConfigurableBundleTemplateSlotCollectionTransfer {
@@ -107,11 +91,6 @@ class ConfigurableBundleTemplateSlotReader implements ConfigurableBundleTemplate
         return $configurableBundleTemplateSlotCollectionTransfer;
     }
 
-    /**
-     * @param int $idConfigurableBundleTemplateSlot
-     *
-     * @return \Generated\Shared\Transfer\ConfigurableBundleTemplateSlotResponseTransfer
-     */
     public function getConfigurableBundleTemplateSlotById(int $idConfigurableBundleTemplateSlot): ConfigurableBundleTemplateSlotResponseTransfer
     {
         $configurableBundleTemplateSlotFilterTransfer = (new ConfigurableBundleTemplateSlotFilterTransfer())
@@ -121,12 +100,6 @@ class ConfigurableBundleTemplateSlotReader implements ConfigurableBundleTemplate
         return $this->getConfigurableBundleTemplateSlot($configurableBundleTemplateSlotFilterTransfer);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplateSlotTransfer $configurableBundleTemplateSlotTransfer
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplateSlotFilterTransfer $configurableBundleTemplateSlotFilterTransfer
-     *
-     * @return \Generated\Shared\Transfer\ConfigurableBundleTemplateSlotTransfer
-     */
     protected function expandConfigurableBundleTemplateSlot(
         ConfigurableBundleTemplateSlotTransfer $configurableBundleTemplateSlotTransfer,
         ConfigurableBundleTemplateSlotFilterTransfer $configurableBundleTemplateSlotFilterTransfer
@@ -151,9 +124,6 @@ class ConfigurableBundleTemplateSlotReader implements ConfigurableBundleTemplate
         return $configurableBundleTemplateSlotTransfer;
     }
 
-    /**
-     * @return \Generated\Shared\Transfer\LocaleTransfer
-     */
     protected function getDefaultLocale(): LocaleTransfer
     {
         $localeTransfers = $this->localeFacade->getLocaleCollection();
@@ -161,11 +131,6 @@ class ConfigurableBundleTemplateSlotReader implements ConfigurableBundleTemplate
         return array_shift($localeTransfers);
     }
 
-    /**
-     * @param string $message
-     *
-     * @return \Generated\Shared\Transfer\ConfigurableBundleTemplateSlotResponseTransfer
-     */
     protected function getErrorResponse(string $message): ConfigurableBundleTemplateSlotResponseTransfer
     {
         $messageTransfer = (new MessageTransfer())

@@ -38,19 +38,11 @@ class ConfigurableBundleNameGenerator implements ConfigurableBundleNameGenerator
      */
     protected $utilTextService;
 
-    /**
-     * @param \Spryker\Zed\ConfigurableBundle\Dependency\Service\ConfigurableBundleToUtilTextServiceInterface $utilTextService
-     */
     public function __construct(ConfigurableBundleToUtilTextServiceInterface $utilTextService)
     {
         $this->utilTextService = $utilTextService;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplateTransfer $configurableBundleTemplateTransfer
-     *
-     * @return string
-     */
     public function generateTemplateName(ConfigurableBundleTemplateTransfer $configurableBundleTemplateTransfer): string
     {
         $configurableBundleTemplateTransfer->requireTranslations();
@@ -61,11 +53,6 @@ class ConfigurableBundleNameGenerator implements ConfigurableBundleNameGenerator
         );
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplateSlotTransfer $configurableBundleTemplateSlotTransfer
-     *
-     * @return string
-     */
     public function generateTemplateSlotName(ConfigurableBundleTemplateSlotTransfer $configurableBundleTemplateSlotTransfer): string
     {
         $configurableBundleTemplateSlotTransfer->requireTranslations();
@@ -76,12 +63,6 @@ class ConfigurableBundleNameGenerator implements ConfigurableBundleNameGenerator
         );
     }
 
-    /**
-     * @param string $translation
-     * @param string $prefix
-     *
-     * @return string
-     */
     protected function generateName(string $translation, string $prefix): string
     {
         $slugifiedName = $this->utilTextService->generateSlug($translation);

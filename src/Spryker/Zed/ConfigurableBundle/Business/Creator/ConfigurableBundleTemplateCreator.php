@@ -39,12 +39,6 @@ class ConfigurableBundleTemplateCreator implements ConfigurableBundleTemplateCre
      */
     protected $eventTriggerer;
 
-    /**
-     * @param \Spryker\Zed\ConfigurableBundle\Persistence\ConfigurableBundleEntityManagerInterface $configurableBundleEntityManager
-     * @param \Spryker\Zed\ConfigurableBundle\Business\Writer\ConfigurableBundleTranslationWriterInterface $configurableBundleTranslationWriter
-     * @param \Spryker\Zed\ConfigurableBundle\Business\Generator\ConfigurableBundleNameGeneratorInterface $configurableBundleNameGenerator
-     * @param \Spryker\Zed\ConfigurableBundle\Business\EventTriggerer\EventTriggererInterface $eventTriggerer
-     */
     public function __construct(
         ConfigurableBundleEntityManagerInterface $configurableBundleEntityManager,
         ConfigurableBundleTranslationWriterInterface $configurableBundleTranslationWriter,
@@ -57,11 +51,6 @@ class ConfigurableBundleTemplateCreator implements ConfigurableBundleTemplateCre
         $this->eventTriggerer = $eventTriggerer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplateTransfer $configurableBundleTemplateTransfer
-     *
-     * @return \Generated\Shared\Transfer\ConfigurableBundleTemplateResponseTransfer
-     */
     public function createConfigurableBundleTemplate(
         ConfigurableBundleTemplateTransfer $configurableBundleTemplateTransfer
     ): ConfigurableBundleTemplateResponseTransfer {
@@ -70,11 +59,6 @@ class ConfigurableBundleTemplateCreator implements ConfigurableBundleTemplateCre
         });
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplateTransfer $configurableBundleTemplateTransfer
-     *
-     * @return \Generated\Shared\Transfer\ConfigurableBundleTemplateResponseTransfer
-     */
     protected function executeCreateConfigurableBundleTemplateTransaction(
         ConfigurableBundleTemplateTransfer $configurableBundleTemplateTransfer
     ): ConfigurableBundleTemplateResponseTransfer {

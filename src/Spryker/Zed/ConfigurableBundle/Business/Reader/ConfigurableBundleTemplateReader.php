@@ -46,12 +46,6 @@ class ConfigurableBundleTemplateReader implements ConfigurableBundleTemplateRead
      */
     protected $configurableBundleTemplateImageSetExpander;
 
-    /**
-     * @param \Spryker\Zed\ConfigurableBundle\Persistence\ConfigurableBundleRepositoryInterface $configurableBundleRepository
-     * @param \Spryker\Zed\ConfigurableBundle\Business\Expander\ConfigurableBundleTranslationExpanderInterface $configurableBundleTranslationExpander
-     * @param \Spryker\Zed\ConfigurableBundle\Dependency\Facade\ConfigurableBundleToLocaleFacadeInterface $localeFacade
-     * @param \Spryker\Zed\ConfigurableBundle\Business\Expander\ConfigurableBundleTemplateImageSetExpanderInterface $configurableBundleTemplateImageSetExpander
-     */
     public function __construct(
         ConfigurableBundleRepositoryInterface $configurableBundleRepository,
         ConfigurableBundleTranslationExpanderInterface $configurableBundleTranslationExpander,
@@ -64,11 +58,6 @@ class ConfigurableBundleTemplateReader implements ConfigurableBundleTemplateRead
         $this->configurableBundleTemplateImageSetExpander = $configurableBundleTemplateImageSetExpander;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplateFilterTransfer $configurableBundleTemplateFilterTransfer
-     *
-     * @return \Generated\Shared\Transfer\ConfigurableBundleTemplateResponseTransfer
-     */
     public function getConfigurableBundleTemplate(
         ConfigurableBundleTemplateFilterTransfer $configurableBundleTemplateFilterTransfer
     ): ConfigurableBundleTemplateResponseTransfer {
@@ -89,11 +78,6 @@ class ConfigurableBundleTemplateReader implements ConfigurableBundleTemplateRead
             ->setIsSuccessful(true);
     }
 
-    /**
-     * @param int $idConfigurableBundleTemplate
-     *
-     * @return \Generated\Shared\Transfer\ConfigurableBundleTemplateResponseTransfer
-     */
     public function getConfigurableBundleTemplateById(int $idConfigurableBundleTemplate): ConfigurableBundleTemplateResponseTransfer
     {
         $configurableBundleTemplateFilterTransfer = (new ConfigurableBundleTemplateFilterTransfer())
@@ -103,11 +87,6 @@ class ConfigurableBundleTemplateReader implements ConfigurableBundleTemplateRead
         return $this->getConfigurableBundleTemplate($configurableBundleTemplateFilterTransfer);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplateFilterTransfer $configurableBundleTemplateFilterTransfer
-     *
-     * @return \Generated\Shared\Transfer\ConfigurableBundleTemplateCollectionTransfer
-     */
     public function getConfigurableBundleTemplateCollection(
         ConfigurableBundleTemplateFilterTransfer $configurableBundleTemplateFilterTransfer
     ): ConfigurableBundleTemplateCollectionTransfer {
@@ -129,12 +108,6 @@ class ConfigurableBundleTemplateReader implements ConfigurableBundleTemplateRead
         return $configurableBundleTemplateCollectionTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplateTransfer $configurableBundleTemplateTransfer
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplateFilterTransfer $configurableBundleTemplateFilterTransfer
-     *
-     * @return \Generated\Shared\Transfer\ConfigurableBundleTemplateTransfer
-     */
     protected function expandConfigurableBundleTemplate(
         ConfigurableBundleTemplateTransfer $configurableBundleTemplateTransfer,
         ConfigurableBundleTemplateFilterTransfer $configurableBundleTemplateFilterTransfer
@@ -154,9 +127,6 @@ class ConfigurableBundleTemplateReader implements ConfigurableBundleTemplateRead
         return $configurableBundleTemplateTransfer;
     }
 
-    /**
-     * @return \Generated\Shared\Transfer\LocaleTransfer
-     */
     protected function getDefaultLocale(): LocaleTransfer
     {
         $localeTransfers = $this->localeFacade->getLocaleCollection();
@@ -164,11 +134,6 @@ class ConfigurableBundleTemplateReader implements ConfigurableBundleTemplateRead
         return array_shift($localeTransfers);
     }
 
-    /**
-     * @param string $message
-     *
-     * @return \Generated\Shared\Transfer\ConfigurableBundleTemplateResponseTransfer
-     */
     protected function getErrorResponse(string $message): ConfigurableBundleTemplateResponseTransfer
     {
         $messageTransfer = (new MessageTransfer())

@@ -21,19 +21,11 @@ class ConfigurableBundleTranslationWriter implements ConfigurableBundleTranslati
      */
     protected $glossaryFacade;
 
-    /**
-     * @param \Spryker\Zed\ConfigurableBundle\Dependency\Facade\ConfigurableBundleToGlossaryFacadeInterface $glossaryFacade
-     */
     public function __construct(ConfigurableBundleToGlossaryFacadeInterface $glossaryFacade)
     {
         $this->glossaryFacade = $glossaryFacade;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplateTransfer $configurableBundleTemplateTransfer
-     *
-     * @return void
-     */
     public function saveTemplateTranslations(ConfigurableBundleTemplateTransfer $configurableBundleTemplateTransfer): void
     {
         $configurableBundleTemplateTransfer->requireName();
@@ -48,11 +40,6 @@ class ConfigurableBundleTranslationWriter implements ConfigurableBundleTranslati
         }
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplateSlotTransfer $configurableBundleTemplateSlotTransfer
-     *
-     * @return void
-     */
     public function saveTemplateSlotTranslations(ConfigurableBundleTemplateSlotTransfer $configurableBundleTemplateSlotTransfer): void
     {
         $configurableBundleTemplateSlotTransfer->requireName();
@@ -67,12 +54,6 @@ class ConfigurableBundleTranslationWriter implements ConfigurableBundleTranslati
         }
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplateTranslationTransfer $configurableBundleTemplateTranslationTransfer
-     * @param string $translationKey
-     *
-     * @return void
-     */
     protected function persistTemplateNameTranslation(
         ConfigurableBundleTemplateTranslationTransfer $configurableBundleTemplateTranslationTransfer,
         string $translationKey
@@ -88,12 +69,6 @@ class ConfigurableBundleTranslationWriter implements ConfigurableBundleTranslati
         );
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplateSlotTranslationTransfer $configurableBundleTemplateSlotTranslationTransfer
-     * @param string $translationKey
-     *
-     * @return void
-     */
     protected function persistTemplateSlotNameTranslation(
         ConfigurableBundleTemplateSlotTranslationTransfer $configurableBundleTemplateSlotTranslationTransfer,
         string $translationKey
@@ -109,13 +84,6 @@ class ConfigurableBundleTranslationWriter implements ConfigurableBundleTranslati
         );
     }
 
-    /**
-     * @param string $translationKey
-     * @param string $translationValue
-     * @param \Generated\Shared\Transfer\LocaleTransfer $localeTransfer
-     *
-     * @return void
-     */
     protected function persistTranslation(string $translationKey, string $translationValue, LocaleTransfer $localeTransfer): void
     {
         if (!$this->glossaryFacade->hasTranslation($translationKey, $localeTransfer)) {

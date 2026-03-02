@@ -53,9 +53,6 @@ class ConfigurableBundleNameGeneratorTest extends Unit
         $this->assertSame($expectedGeneratedName, $templateName);
     }
 
-    /**
-     * @return array
-     */
     public function getGenerateConfigurableBundleTemplateNameData(): array
     {
         return [
@@ -67,9 +64,6 @@ class ConfigurableBundleNameGeneratorTest extends Unit
         ];
     }
 
-    /**
-     * @return \Spryker\Zed\ConfigurableBundle\Business\Generator\ConfigurableBundleNameGeneratorInterface
-     */
     protected function createConfigurableBundleNameGenerator(): ConfigurableBundleNameGeneratorInterface
     {
         return new ConfigurableBundleNameGenerator($this->createConfigurableBundleToUtilTextServiceBridgeMock());
@@ -86,11 +80,6 @@ class ConfigurableBundleNameGeneratorTest extends Unit
             ->getMock();
     }
 
-    /**
-     * @param string $firstTranslationName
-     *
-     * @return \Generated\Shared\Transfer\ConfigurableBundleTemplateTransfer
-     */
     protected function createConfigurableBundleTemplateTransfer(string $firstTranslationName): ConfigurableBundleTemplateTransfer
     {
         $firstConfigurableBundleTemplateTranslationTransfer = (new ConfigurableBundleTemplateTranslationTransfer())

@@ -13,9 +13,6 @@ use Spryker\Service\Kernel\AbstractServiceFactory;
 
 class ConfigurableBundleServiceFactory extends AbstractServiceFactory
 {
-    /**
-     * @return \Spryker\Service\ConfigurableBundle\Expander\ConfiguredBundleGroupKeyExpanderInterface
-     */
     public function createConfiguredBundleGroupKeyExpander(): ConfiguredBundleGroupKeyExpanderInterface
     {
         return new ConfiguredBundleGroupKeyExpander();

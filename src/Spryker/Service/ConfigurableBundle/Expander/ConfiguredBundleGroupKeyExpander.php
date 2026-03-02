@@ -11,11 +11,6 @@ use Generated\Shared\Transfer\ConfiguredBundleTransfer;
 
 class ConfiguredBundleGroupKeyExpander implements ConfiguredBundleGroupKeyExpanderInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ConfiguredBundleTransfer $configuredBundleTransfer
-     *
-     * @return \Generated\Shared\Transfer\ConfiguredBundleTransfer
-     */
     public function expandConfiguredBundleWithGroupKey(ConfiguredBundleTransfer $configuredBundleTransfer): ConfiguredBundleTransfer
     {
         $configuredBundleGroupKey = sprintf(

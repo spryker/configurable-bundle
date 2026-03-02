@@ -47,13 +47,6 @@ class ConfigurableBundleTemplateSlotCreator implements ConfigurableBundleTemplat
      */
     protected $configurableBundleTemplateReader;
 
-    /**
-     * @param \Spryker\Zed\ConfigurableBundle\Persistence\ConfigurableBundleEntityManagerInterface $configurableBundleEntityManager
-     * @param \Spryker\Zed\ConfigurableBundle\Business\Writer\ConfigurableBundleTranslationWriterInterface $configurableBundleSlotTranslationWriter
-     * @param \Spryker\Zed\ConfigurableBundle\Business\Generator\ConfigurableBundleNameGeneratorInterface $configurableBundleNameGenerator
-     * @param \Spryker\Zed\ConfigurableBundle\Business\Writer\ProductListWriterInterface $productListWriter
-     * @param \Spryker\Zed\ConfigurableBundle\Business\Reader\ConfigurableBundleTemplateReaderInterface $configurableBundleTemplateReader
-     */
     public function __construct(
         ConfigurableBundleEntityManagerInterface $configurableBundleEntityManager,
         ConfigurableBundleTranslationWriterInterface $configurableBundleSlotTranslationWriter,
@@ -68,11 +61,6 @@ class ConfigurableBundleTemplateSlotCreator implements ConfigurableBundleTemplat
         $this->configurableBundleTemplateReader = $configurableBundleTemplateReader;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplateSlotTransfer $configurableBundleTemplateSlotTransfer
-     *
-     * @return \Generated\Shared\Transfer\ConfigurableBundleTemplateSlotResponseTransfer
-     */
     public function createConfigurableBundleTemplateSlot(
         ConfigurableBundleTemplateSlotTransfer $configurableBundleTemplateSlotTransfer
     ): ConfigurableBundleTemplateSlotResponseTransfer {
@@ -91,11 +79,6 @@ class ConfigurableBundleTemplateSlotCreator implements ConfigurableBundleTemplat
         });
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplateSlotTransfer $configurableBundleTemplateSlotTransfer
-     *
-     * @return \Generated\Shared\Transfer\ConfigurableBundleTemplateSlotResponseTransfer
-     */
     protected function executeCreateConfigurableBundleTemplateSlotTransaction(
         ConfigurableBundleTemplateSlotTransfer $configurableBundleTemplateSlotTransfer
     ): ConfigurableBundleTemplateSlotResponseTransfer {
@@ -119,11 +102,6 @@ class ConfigurableBundleTemplateSlotCreator implements ConfigurableBundleTemplat
             ->setIsSuccessful(true);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplateSlotTransfer $configurableBundleTemplateSlotTransfer
-     *
-     * @return \Generated\Shared\Transfer\ConfigurableBundleTemplateResponseTransfer
-     */
     protected function getConfigurableBundleTemplate(
         ConfigurableBundleTemplateSlotTransfer $configurableBundleTemplateSlotTransfer
     ): ConfigurableBundleTemplateResponseTransfer {

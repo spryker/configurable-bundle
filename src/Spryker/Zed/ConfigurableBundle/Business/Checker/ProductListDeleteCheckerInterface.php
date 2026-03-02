@@ -12,11 +12,6 @@ use Generated\Shared\Transfer\ProductListResponseTransfer;
 
 interface ProductListDeleteCheckerInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplateSlotFilterTransfer $configurableBundleTemplateSlotFilterTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductListResponseTransfer
-     */
     public function isProductListDeletable(
         ConfigurableBundleTemplateSlotFilterTransfer $configurableBundleTemplateSlotFilterTransfer
     ): ProductListResponseTransfer;

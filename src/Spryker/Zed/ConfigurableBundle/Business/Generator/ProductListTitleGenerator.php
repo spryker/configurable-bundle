@@ -11,11 +11,6 @@ use Generated\Shared\Transfer\ConfigurableBundleTemplateSlotTransfer;
 
 class ProductListTitleGenerator implements ProductListTitleGeneratorInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplateSlotTransfer $configurableBundleTemplateSlotTransfer
-     *
-     * @return string
-     */
     public function generateProductListTitle(ConfigurableBundleTemplateSlotTransfer $configurableBundleTemplateSlotTransfer): string
     {
         $configurableBundleTemplateSlotTransfer

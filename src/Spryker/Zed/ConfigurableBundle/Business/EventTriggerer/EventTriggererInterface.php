@@ -9,10 +9,5 @@ namespace Spryker\Zed\ConfigurableBundle\Business\EventTriggerer;
 
 interface EventTriggererInterface
 {
-    /**
-     * @param int $idConfigurableBundleTemplate
-     *
-     * @return void
-     */
     public function triggerConfigurableBundleTemplatePublishEvent(int $idConfigurableBundleTemplate): void;
 }

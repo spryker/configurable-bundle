@@ -12,24 +12,9 @@ use Generated\Shared\Transfer\ProductListTransfer;
 
 interface ConfigurableBundleToProductListFacadeInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ProductListTransfer $productListTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductListResponseTransfer
-     */
     public function createProductList(ProductListTransfer $productListTransfer): ProductListResponseTransfer;
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductListTransfer $productListTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductListResponseTransfer
-     */
     public function updateProductList(ProductListTransfer $productListTransfer): ProductListResponseTransfer;
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductListTransfer $productListTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductListTransfer
-     */
     public function getProductListById(ProductListTransfer $productListTransfer): ProductListTransfer;
 }

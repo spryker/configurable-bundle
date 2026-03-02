@@ -11,10 +11,5 @@ use Generated\Shared\Transfer\QuoteTransfer;
 
 interface ConfiguredBundleItemCleanerInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
-     *
-     * @return \Generated\Shared\Transfer\QuoteTransfer
-     */
     public function removeInactiveConfiguredBundleItemsFromQuote(QuoteTransfer $quoteTransfer): QuoteTransfer;
 }

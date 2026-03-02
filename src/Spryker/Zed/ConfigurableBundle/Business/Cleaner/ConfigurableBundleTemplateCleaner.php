@@ -34,11 +34,6 @@ class ConfigurableBundleTemplateCleaner implements ConfigurableBundleTemplateCle
      */
     protected $productImageFacade;
 
-    /**
-     * @param \Spryker\Zed\ConfigurableBundle\Persistence\ConfigurableBundleEntityManagerInterface $configurableBundleEntityManager
-     * @param \Spryker\Zed\ConfigurableBundle\Business\Reader\ConfigurableBundleTemplateReaderInterface $configurableBundleTemplateReader
-     * @param \Spryker\Zed\ConfigurableBundle\Dependency\Facade\ConfigurableBundleToProductImageFacadeInterface $productImageFacade
-     */
     public function __construct(
         ConfigurableBundleEntityManagerInterface $configurableBundleEntityManager,
         ConfigurableBundleTemplateReaderInterface $configurableBundleTemplateReader,
@@ -49,11 +44,6 @@ class ConfigurableBundleTemplateCleaner implements ConfigurableBundleTemplateCle
         $this->productImageFacade = $productImageFacade;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplateFilterTransfer $configurableBundleTemplateFilterTransfer
-     *
-     * @return \Generated\Shared\Transfer\ConfigurableBundleTemplateResponseTransfer
-     */
     public function deleteConfigurableBundleTemplate(
         ConfigurableBundleTemplateFilterTransfer $configurableBundleTemplateFilterTransfer
     ): ConfigurableBundleTemplateResponseTransfer {
@@ -71,11 +61,6 @@ class ConfigurableBundleTemplateCleaner implements ConfigurableBundleTemplateCle
         });
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplateTransfer $configurableBundleTemplateTransfer
-     *
-     * @return \Generated\Shared\Transfer\ConfigurableBundleTemplateResponseTransfer
-     */
     protected function executeDeleteConfigurableBundleTemplateTransaction(
         ConfigurableBundleTemplateTransfer $configurableBundleTemplateTransfer
     ): ConfigurableBundleTemplateResponseTransfer {
@@ -91,11 +76,6 @@ class ConfigurableBundleTemplateCleaner implements ConfigurableBundleTemplateCle
             ->setIsSuccessful(true);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplateTransfer $configurableBundleTemplateTransfer
-     *
-     * @return void
-     */
     protected function deleteProductImageSets(ConfigurableBundleTemplateTransfer $configurableBundleTemplateTransfer): void
     {
         foreach ($configurableBundleTemplateTransfer->getProductImageSets() as $productImageSetTransfer) {

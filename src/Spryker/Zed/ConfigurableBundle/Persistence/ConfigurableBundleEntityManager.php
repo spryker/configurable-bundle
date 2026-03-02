@@ -18,11 +18,6 @@ use Spryker\Zed\Kernel\Persistence\AbstractEntityManager;
  */
 class ConfigurableBundleEntityManager extends AbstractEntityManager implements ConfigurableBundleEntityManagerInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplateTransfer $configurableBundleTemplateTransfer
-     *
-     * @return \Generated\Shared\Transfer\ConfigurableBundleTemplateTransfer
-     */
     public function createConfigurableBundleTemplate(
         ConfigurableBundleTemplateTransfer $configurableBundleTemplateTransfer
     ): ConfigurableBundleTemplateTransfer {
@@ -39,11 +34,6 @@ class ConfigurableBundleEntityManager extends AbstractEntityManager implements C
         return $configurableBundleTemplateTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplateTransfer $configurableBundleTemplateTransfer
-     *
-     * @return \Generated\Shared\Transfer\ConfigurableBundleTemplateTransfer
-     */
     public function updateConfigurableBundleTemplate(
         ConfigurableBundleTemplateTransfer $configurableBundleTemplateTransfer
     ): ConfigurableBundleTemplateTransfer {
@@ -61,11 +51,6 @@ class ConfigurableBundleEntityManager extends AbstractEntityManager implements C
         return $configurableBundleTemplateTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplateSlotTransfer $configurableBundleTemplateSlotTransfer
-     *
-     * @return \Generated\Shared\Transfer\ConfigurableBundleTemplateSlotTransfer
-     */
     public function createConfigurableBundleTemplateSlot(
         ConfigurableBundleTemplateSlotTransfer $configurableBundleTemplateSlotTransfer
     ): ConfigurableBundleTemplateSlotTransfer {
@@ -82,11 +67,6 @@ class ConfigurableBundleEntityManager extends AbstractEntityManager implements C
         return $configurableBundleTemplateSlotTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplateSlotTransfer $configurableBundleTemplateSlotTransfer
-     *
-     * @return \Generated\Shared\Transfer\ConfigurableBundleTemplateSlotTransfer
-     */
     public function updateConfigurableBundleTemplateSlot(
         ConfigurableBundleTemplateSlotTransfer $configurableBundleTemplateSlotTransfer
     ): ConfigurableBundleTemplateSlotTransfer {
@@ -104,11 +84,6 @@ class ConfigurableBundleEntityManager extends AbstractEntityManager implements C
         return $configurableBundleTemplateSlotTransfer;
     }
 
-    /**
-     * @param int $idConfigurableBundleTemplate
-     *
-     * @return void
-     */
     public function deleteConfigurableBundleTemplateById(int $idConfigurableBundleTemplate): void
     {
         $configurableBundleTemplateEntity = $this->getFactory()
@@ -123,11 +98,6 @@ class ConfigurableBundleEntityManager extends AbstractEntityManager implements C
         $configurableBundleTemplateEntity->delete();
     }
 
-    /**
-     * @param int $idConfigurableBundleTemplateSlot
-     *
-     * @return void
-     */
     public function deleteConfigurableBundleTemplateSlotById(int $idConfigurableBundleTemplateSlot): void
     {
         $configurableBundleTemplateSlotEntity = $this->getFactory()
@@ -142,11 +112,6 @@ class ConfigurableBundleEntityManager extends AbstractEntityManager implements C
         $configurableBundleTemplateSlotEntity->delete();
     }
 
-    /**
-     * @param int $idConfigurableBundleTemplate
-     *
-     * @return void
-     */
     public function deleteConfigurableBundleTemplateSlotsByIdTemplate(int $idConfigurableBundleTemplate): void
     {
         $configurableBundleTemplateSlotEntities = $this->getFactory()

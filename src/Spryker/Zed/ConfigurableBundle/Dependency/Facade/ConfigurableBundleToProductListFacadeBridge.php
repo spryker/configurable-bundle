@@ -25,31 +25,16 @@ class ConfigurableBundleToProductListFacadeBridge implements ConfigurableBundleT
         $this->productListFacade = $productListFacade;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductListTransfer $productListTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductListResponseTransfer
-     */
     public function createProductList(ProductListTransfer $productListTransfer): ProductListResponseTransfer
     {
         return $this->productListFacade->createProductList($productListTransfer);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductListTransfer $productListTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductListResponseTransfer
-     */
     public function updateProductList(ProductListTransfer $productListTransfer): ProductListResponseTransfer
     {
         return $this->productListFacade->updateProductList($productListTransfer);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductListTransfer $productListTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductListTransfer
-     */
     public function getProductListById(ProductListTransfer $productListTransfer): ProductListTransfer
     {
         return $this->productListFacade->getProductListById($productListTransfer);

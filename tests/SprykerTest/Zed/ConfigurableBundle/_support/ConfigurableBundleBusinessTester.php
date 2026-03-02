@@ -68,9 +68,6 @@ class ConfigurableBundleBusinessTester extends Actor
         return $this->haveConfigurableBundleTemplateSlot(array_merge($data, $defaultData));
     }
 
-    /**
-     * @return \Generated\Shared\Transfer\ConfigurableBundleTemplateTransfer
-     */
     public function createDeactivatedConfigurableBundleTemplate(): ConfigurableBundleTemplateTransfer
     {
         return $this->haveConfigurableBundleTemplate([
@@ -133,9 +130,6 @@ class ConfigurableBundleBusinessTester extends Actor
         return $configurableBundleTemplateSlotTranslationTransfers;
     }
 
-    /**
-     * @return \Generated\Shared\Transfer\ConfigurableBundleTemplateTransfer
-     */
     public function createConfigurableBundleTemplateTransfer(): ConfigurableBundleTemplateTransfer
     {
         $configurableBundleTemplateTranslationTransfers = $this->createTemplateTranslationTransfersForAvailableLocales();
@@ -143,9 +137,6 @@ class ConfigurableBundleBusinessTester extends Actor
         return (new ConfigurableBundleTemplateTransfer())->setTranslations($configurableBundleTemplateTranslationTransfers);
     }
 
-    /**
-     * @return \Generated\Shared\Transfer\ConfigurableBundleTemplateSlotTransfer
-     */
     public function createConfigurableBundleTemplateSlotTransfer(): ConfigurableBundleTemplateSlotTransfer
     {
         $configurableBundleTemplateSlotTranslationTransfers = $this->createSlotTranslationTransfersForAvailableLocales();
@@ -191,11 +182,6 @@ class ConfigurableBundleBusinessTester extends Actor
         return $configurableBundleTemplateSlotTranslationTransfers;
     }
 
-    /**
-     * @param int $sortOrder
-     *
-     * @return \Generated\Shared\Transfer\ProductImageTransfer
-     */
     public function createProductImageTransferWithSortOrder(int $sortOrder): ProductImageTransfer
     {
         /** @var \Generated\Shared\Transfer\ProductImageTransfer $productImageTransfer */
@@ -206,9 +192,6 @@ class ConfigurableBundleBusinessTester extends Actor
         return $productImageTransfer;
     }
 
-    /**
-     * @return \Spryker\Zed\Locale\Business\LocaleFacadeInterface
-     */
     public function getLocaleFacade(): LocaleFacadeInterface
     {
         return $this->getLocator()->locale()->facade();

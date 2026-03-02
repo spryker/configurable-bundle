@@ -59,9 +59,6 @@ use Spryker\Zed\Kernel\Business\AbstractBusinessFactory;
  */
 class ConfigurableBundleBusinessFactory extends AbstractBusinessFactory
 {
-    /**
-     * @return \Spryker\Zed\ConfigurableBundle\Business\Generator\ConfigurableBundleNameGeneratorInterface
-     */
     public function createConfigurableBundleNameGenerator(): ConfigurableBundleNameGeneratorInterface
     {
         return new ConfigurableBundleNameGenerator(
@@ -69,17 +66,11 @@ class ConfigurableBundleBusinessFactory extends AbstractBusinessFactory
         );
     }
 
-    /**
-     * @return \Spryker\Zed\ConfigurableBundle\Business\Generator\ProductListTitleGeneratorInterface
-     */
     public function createProductListTitleGenerator(): ProductListTitleGeneratorInterface
     {
         return new ProductListTitleGenerator();
     }
 
-    /**
-     * @return \Spryker\Zed\ConfigurableBundle\Business\Checker\ProductListDeleteCheckerInterface
-     */
     public function createProductListDeleteChecker(): ProductListDeleteCheckerInterface
     {
         return new ProductListDeleteChecker(
@@ -87,9 +78,6 @@ class ConfigurableBundleBusinessFactory extends AbstractBusinessFactory
         );
     }
 
-    /**
-     * @return \Spryker\Zed\ConfigurableBundle\Business\Cleaner\ConfigurableBundleTemplateCleanerInterface
-     */
     public function createConfigurableBundleTemplateCleaner(): ConfigurableBundleTemplateCleanerInterface
     {
         return new ConfigurableBundleTemplateCleaner(
@@ -99,9 +87,6 @@ class ConfigurableBundleBusinessFactory extends AbstractBusinessFactory
         );
     }
 
-    /**
-     * @return \Spryker\Zed\ConfigurableBundle\Business\Cleaner\ConfigurableBundleTemplateSlotCleanerInterface
-     */
     public function createConfigurableBundleTemplateSlotCleaner(): ConfigurableBundleTemplateSlotCleanerInterface
     {
         return new ConfigurableBundleTemplateSlotCleaner(
@@ -110,9 +95,6 @@ class ConfigurableBundleBusinessFactory extends AbstractBusinessFactory
         );
     }
 
-    /**
-     * @return \Spryker\Zed\ConfigurableBundle\Business\Cleaner\ConfiguredBundleItemCleanerInterface
-     */
     public function createConfiguredBundleItemCleaner(): ConfiguredBundleItemCleanerInterface
     {
         return new ConfiguredBundleItemCleaner(
@@ -120,9 +102,6 @@ class ConfigurableBundleBusinessFactory extends AbstractBusinessFactory
         );
     }
 
-    /**
-     * @return \Spryker\Zed\ConfigurableBundle\Business\Expander\ConfigurableBundleTemplateSlotProductListExpanderInterface
-     */
     public function createConfigurableBundleTemplateSlotProductListExpander(): ConfigurableBundleTemplateSlotProductListExpanderInterface
     {
         return new ConfigurableBundleTemplateSlotProductListExpander(
@@ -130,9 +109,6 @@ class ConfigurableBundleBusinessFactory extends AbstractBusinessFactory
         );
     }
 
-    /**
-     * @return \Spryker\Zed\ConfigurableBundle\Business\Expander\ConfigurableBundleTranslationExpanderInterface
-     */
     public function createConfigurableBundleTranslationExpander(): ConfigurableBundleTranslationExpanderInterface
     {
         return new ConfigurableBundleTranslationExpander(
@@ -141,9 +117,6 @@ class ConfigurableBundleBusinessFactory extends AbstractBusinessFactory
         );
     }
 
-    /**
-     * @return \Spryker\Zed\ConfigurableBundle\Business\Creator\ConfigurableBundleTemplateCreatorInterface
-     */
     public function createConfigurableBundleTemplateCreator(): ConfigurableBundleTemplateCreatorInterface
     {
         return new ConfigurableBundleTemplateCreator(
@@ -154,9 +127,6 @@ class ConfigurableBundleBusinessFactory extends AbstractBusinessFactory
         );
     }
 
-    /**
-     * @return \Spryker\Zed\ConfigurableBundle\Business\Updater\ConfigurableBundleTemplateUpdaterInterface
-     */
     public function createConfigurableBundleTemplateUpdater(): ConfigurableBundleTemplateUpdaterInterface
     {
         return new ConfigurableBundleTemplateUpdater(
@@ -168,9 +138,6 @@ class ConfigurableBundleBusinessFactory extends AbstractBusinessFactory
         );
     }
 
-    /**
-     * @return \Spryker\Zed\ConfigurableBundle\Business\Creator\ConfigurableBundleTemplateSlotCreatorInterface
-     */
     public function createConfigurableBundleTemplateSlotCreator(): ConfigurableBundleTemplateSlotCreatorInterface
     {
         return new ConfigurableBundleTemplateSlotCreator(
@@ -182,9 +149,6 @@ class ConfigurableBundleBusinessFactory extends AbstractBusinessFactory
         );
     }
 
-    /**
-     * @return \Spryker\Zed\ConfigurableBundle\Business\Updater\ConfigurableBundleTemplateSlotUpdaterInterface
-     */
     public function createConfigurableBundleTemplateSlotUpdater(): ConfigurableBundleTemplateSlotUpdaterInterface
     {
         return new ConfigurableBundleTemplateSlotUpdater(
@@ -196,9 +160,6 @@ class ConfigurableBundleBusinessFactory extends AbstractBusinessFactory
         );
     }
 
-    /**
-     * @return \Spryker\Zed\ConfigurableBundle\Business\Writer\ConfigurableBundleTranslationWriterInterface
-     */
     public function createConfigurableBundleTranslationWriter(): ConfigurableBundleTranslationWriterInterface
     {
         return new ConfigurableBundleTranslationWriter(
@@ -206,9 +167,6 @@ class ConfigurableBundleBusinessFactory extends AbstractBusinessFactory
         );
     }
 
-    /**
-     * @return \Spryker\Zed\ConfigurableBundle\Business\Writer\ProductListWriterInterface
-     */
     public function createProductListWriter(): ProductListWriterInterface
     {
         return new ProductListWriter(
@@ -217,9 +175,6 @@ class ConfigurableBundleBusinessFactory extends AbstractBusinessFactory
         );
     }
 
-    /**
-     * @return \Spryker\Zed\ConfigurableBundle\Business\Reader\ConfigurableBundleTemplateReaderInterface
-     */
     public function createConfigurableBundleTemplateReader(): ConfigurableBundleTemplateReaderInterface
     {
         return new ConfigurableBundleTemplateReader(
@@ -230,9 +185,6 @@ class ConfigurableBundleBusinessFactory extends AbstractBusinessFactory
         );
     }
 
-    /**
-     * @return \Spryker\Zed\ConfigurableBundle\Business\Expander\ConfigurableBundleTemplateImageSetExpanderInterface
-     */
     public function createConfigurableBundleTemplateImageSetExpander(): ConfigurableBundleTemplateImageSetExpanderInterface
     {
         return new ConfigurableBundleTemplateImageSetExpander(
@@ -241,9 +193,6 @@ class ConfigurableBundleBusinessFactory extends AbstractBusinessFactory
         );
     }
 
-    /**
-     * @return \Spryker\Zed\ConfigurableBundle\Business\Reader\ConfigurableBundleTemplateSlotReaderInterface
-     */
     public function createConfigurableBundleTemplateSlotReader(): ConfigurableBundleTemplateSlotReaderInterface
     {
         return new ConfigurableBundleTemplateSlotReader(
@@ -254,57 +203,36 @@ class ConfigurableBundleBusinessFactory extends AbstractBusinessFactory
         );
     }
 
-    /**
-     * @return \Spryker\Zed\ConfigurableBundle\Business\EventTriggerer\EventTriggererInterface
-     */
     public function createEventTriggerer(): EventTriggererInterface
     {
         return new EventTriggerer($this->getEventFacade());
     }
 
-    /**
-     * @return \Spryker\Zed\ConfigurableBundle\Dependency\Facade\ConfigurableBundleToGlossaryFacadeInterface
-     */
     public function getGlossaryFacade(): ConfigurableBundleToGlossaryFacadeInterface
     {
         return $this->getProvidedDependency(ConfigurableBundleDependencyProvider::FACADE_GLOSSARY);
     }
 
-    /**
-     * @return \Spryker\Zed\ConfigurableBundle\Dependency\Facade\ConfigurableBundleToLocaleFacadeInterface
-     */
     public function getLocaleFacade(): ConfigurableBundleToLocaleFacadeInterface
     {
         return $this->getProvidedDependency(ConfigurableBundleDependencyProvider::FACADE_LOCALE);
     }
 
-    /**
-     * @return \Spryker\Zed\ConfigurableBundle\Dependency\Facade\ConfigurableBundleToProductListFacadeInterface
-     */
     public function getProductListFacade(): ConfigurableBundleToProductListFacadeInterface
     {
         return $this->getProvidedDependency(ConfigurableBundleDependencyProvider::FACADE_PRODUCT_LIST);
     }
 
-    /**
-     * @return \Spryker\Zed\ConfigurableBundle\Dependency\Facade\ConfigurableBundleToEventFacadeInterface
-     */
     public function getEventFacade(): ConfigurableBundleToEventFacadeInterface
     {
         return $this->getProvidedDependency(ConfigurableBundleDependencyProvider::FACADE_EVENT);
     }
 
-    /**
-     * @return \Spryker\Zed\ConfigurableBundle\Dependency\Facade\ConfigurableBundleToProductImageFacadeInterface
-     */
     public function getProductImageFacade(): ConfigurableBundleToProductImageFacadeInterface
     {
         return $this->getProvidedDependency(ConfigurableBundleDependencyProvider::FACADE_PRODUCT_IMAGE);
     }
 
-    /**
-     * @return \Spryker\Zed\ConfigurableBundle\Dependency\Service\ConfigurableBundleToUtilTextServiceInterface
-     */
     public function getUtilTextService(): ConfigurableBundleToUtilTextServiceInterface
     {
         return $this->getProvidedDependency(ConfigurableBundleDependencyProvider::SERVICE_UTIL_TEXT);

@@ -24,10 +24,6 @@ class ConfigurableBundleTemplateImageSetExpander implements ConfigurableBundleTe
      */
     protected $localeFacade;
 
-    /**
-     * @param \Spryker\Zed\ConfigurableBundle\Persistence\ConfigurableBundleRepositoryInterface $configurableBundleRepository
-     * @param \Spryker\Zed\ConfigurableBundle\Dependency\Facade\ConfigurableBundleToLocaleFacadeInterface $localeFacade
-     */
     public function __construct(
         ConfigurableBundleRepositoryInterface $configurableBundleRepository,
         ConfigurableBundleToLocaleFacadeInterface $localeFacade

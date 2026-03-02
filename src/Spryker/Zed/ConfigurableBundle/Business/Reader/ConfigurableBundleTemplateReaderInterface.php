@@ -13,27 +13,12 @@ use Generated\Shared\Transfer\ConfigurableBundleTemplateResponseTransfer;
 
 interface ConfigurableBundleTemplateReaderInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplateFilterTransfer $configurableBundleTemplateFilterTransfer
-     *
-     * @return \Generated\Shared\Transfer\ConfigurableBundleTemplateResponseTransfer
-     */
     public function getConfigurableBundleTemplate(
         ConfigurableBundleTemplateFilterTransfer $configurableBundleTemplateFilterTransfer
     ): ConfigurableBundleTemplateResponseTransfer;
 
-    /**
-     * @param int $idConfigurableBundleTemplate
-     *
-     * @return \Generated\Shared\Transfer\ConfigurableBundleTemplateResponseTransfer
-     */
     public function getConfigurableBundleTemplateById(int $idConfigurableBundleTemplate): ConfigurableBundleTemplateResponseTransfer;
 
-    /**
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplateFilterTransfer $configurableBundleTemplateFilterTransfer
-     *
-     * @return \Generated\Shared\Transfer\ConfigurableBundleTemplateCollectionTransfer
-     */
     public function getConfigurableBundleTemplateCollection(
         ConfigurableBundleTemplateFilterTransfer $configurableBundleTemplateFilterTransfer
     ): ConfigurableBundleTemplateCollectionTransfer;

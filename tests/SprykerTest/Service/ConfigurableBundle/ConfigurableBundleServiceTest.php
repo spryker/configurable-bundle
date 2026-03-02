@@ -29,9 +29,6 @@ class ConfigurableBundleServiceTest extends Unit
      */
     protected ConfigurableBundleServiceTester $tester;
 
-    /**
-     * @return void
-     */
     public function testExpandConfiguredBundleWithGroupKeyAddsGroupKeyToConfiguredBundle(): void
     {
         // Arrange
@@ -49,9 +46,6 @@ class ConfigurableBundleServiceTest extends Unit
         $this->assertNotNull($resultConfiguredBundleTransfer->getGroupKey());
     }
 
-    /**
-     * @return void
-     */
     public function testExpandConfiguredBundleWithGroupKeyThrowsExceptionWhenConfigurableBundleTemplateIsNotProvided(): void
     {
         // Arrange
@@ -67,9 +61,6 @@ class ConfigurableBundleServiceTest extends Unit
         $this->tester->getService()->expandConfiguredBundleWithGroupKey($configuredBundleTransfer);
     }
 
-    /**
-     * @return void
-     */
     public function testExpandConfiguredBundleWithGroupKeyThrowsExceptionWhenConfigurableBundleTemplateUuidIsNotProvided(): void
     {
         // Arrange

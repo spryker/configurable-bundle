@@ -12,17 +12,7 @@ use Generated\Shared\Transfer\ConfigurableBundleTemplateTransfer;
 
 interface ConfigurableBundleTranslationWriterInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplateTransfer $configurableBundleTemplateTransfer
-     *
-     * @return void
-     */
     public function saveTemplateTranslations(ConfigurableBundleTemplateTransfer $configurableBundleTemplateTransfer): void;
 
-    /**
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplateSlotTransfer $configurableBundleTemplateSlotTransfer
-     *
-     * @return void
-     */
     public function saveTemplateSlotTranslations(ConfigurableBundleTemplateSlotTransfer $configurableBundleTemplateSlotTransfer): void;
 }

@@ -12,11 +12,6 @@ use Generated\Shared\Transfer\ConfigurableBundleTemplateSlotResponseTransfer;
 
 interface ConfigurableBundleTemplateSlotCleanerInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplateSlotFilterTransfer $configurableBundleTemplateSlotFilterTransfer
-     *
-     * @return \Generated\Shared\Transfer\ConfigurableBundleTemplateSlotResponseTransfer
-     */
     public function deleteConfigurableBundleTemplateSlot(
         ConfigurableBundleTemplateSlotFilterTransfer $configurableBundleTemplateSlotFilterTransfer
     ): ConfigurableBundleTemplateSlotResponseTransfer;

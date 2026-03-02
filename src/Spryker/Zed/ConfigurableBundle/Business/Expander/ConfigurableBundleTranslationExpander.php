@@ -29,10 +29,6 @@ class ConfigurableBundleTranslationExpander implements ConfigurableBundleTransla
      */
     protected $localeFacade;
 
-    /**
-     * @param \Spryker\Zed\ConfigurableBundle\Dependency\Facade\ConfigurableBundleToGlossaryFacadeInterface $glossaryFacade
-     * @param \Spryker\Zed\ConfigurableBundle\Dependency\Facade\ConfigurableBundleToLocaleFacadeInterface $localeFacade
-     */
     public function __construct(
         ConfigurableBundleToGlossaryFacadeInterface $glossaryFacade,
         ConfigurableBundleToLocaleFacadeInterface $localeFacade
@@ -104,12 +100,6 @@ class ConfigurableBundleTranslationExpander implements ConfigurableBundleTransla
         return $this->glossaryFacade->getTranslationsByGlossaryKeyAndLocales($translationKey, $localeTransfers->getArrayCopy());
     }
 
-    /**
-     * @param string $translationKey
-     * @param \Generated\Shared\Transfer\LocaleTransfer $localeTransfer
-     *
-     * @return \Generated\Shared\Transfer\TranslationTransfer
-     */
     protected function getSingleLocaleTranslation(string $translationKey, LocaleTransfer $localeTransfer): TranslationTransfer
     {
         if ($this->glossaryFacade->hasTranslation($translationKey, $localeTransfer)) {
@@ -119,11 +109,6 @@ class ConfigurableBundleTranslationExpander implements ConfigurableBundleTransla
         return $this->getFallbackTranslation($translationKey);
     }
 
-    /**
-     * @param string $translationKey
-     *
-     * @return \Generated\Shared\Transfer\TranslationTransfer
-     */
     protected function getFallbackTranslation(string $translationKey): TranslationTransfer
     {
         $translationTransfers = $this->glossaryFacade->getTranslationsByGlossaryKeyAndLocales(

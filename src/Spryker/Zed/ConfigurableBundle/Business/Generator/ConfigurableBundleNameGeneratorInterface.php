@@ -12,17 +12,7 @@ use Generated\Shared\Transfer\ConfigurableBundleTemplateTransfer;
 
 interface ConfigurableBundleNameGeneratorInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplateTransfer $configurableBundleTemplateTransfer
-     *
-     * @return string
-     */
     public function generateTemplateName(ConfigurableBundleTemplateTransfer $configurableBundleTemplateTransfer): string;
 
-    /**
-     * @param \Generated\Shared\Transfer\ConfigurableBundleTemplateSlotTransfer $configurableBundleTemplateSlotTransfer
-     *
-     * @return string
-     */
     public function generateTemplateSlotName(ConfigurableBundleTemplateSlotTransfer $configurableBundleTemplateSlotTransfer): string;
 }
